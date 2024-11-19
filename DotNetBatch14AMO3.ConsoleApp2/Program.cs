@@ -1,10 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-using DotNetBatch14AM3.ConsoleApp1.AdoDotNetExamples;
-using DotNetBatch14AM3.ConsoleApp1.DapperExamples;
-using DotNetBatch14AM3.ConsoleApp1.EFCoreExamples;
-
 //AdoDotNetExample adoDotNetExample = new();
 //adoDotNetExample.Read();
 //adoDotNetExample.Edit("456A4F62-7181-4054-A8CD-160A51F343C9");

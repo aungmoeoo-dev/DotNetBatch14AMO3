@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetBatch14AM3.ConsoleApp1.Dtos;
+namespace DotNetBatch14AM3.ConsoleApp2.Dtos;
 
 internal class BlogDto
 {

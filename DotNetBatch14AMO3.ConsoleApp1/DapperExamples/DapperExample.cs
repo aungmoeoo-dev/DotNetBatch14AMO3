@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using DotNetBatch14AMO3.ConsoleApp1.Dtos;
+using DotNetBatch14AM3.ConsoleApp1.Dtos;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetBatch14AMO3.ConsoleApp1.DapperExamples;
+namespace DotNetBatch14AM3.ConsoleApp1.DapperExamples;
 
 internal class DapperExample
 {

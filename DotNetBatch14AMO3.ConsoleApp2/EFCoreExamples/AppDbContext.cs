@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetBatch14AM3.ConsoleApp1.EFCoreExamples;
+namespace DotNetBatch14AM3.ConsoleApp2.EFCoreExamples;
 
 internal class AppDbContext : DbContext
 {

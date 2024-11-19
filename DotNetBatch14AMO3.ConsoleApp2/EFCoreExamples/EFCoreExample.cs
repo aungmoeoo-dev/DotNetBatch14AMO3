@@ -1,19 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DotNetBatch14AM3.ConsoleApp2.EFCoreExamples;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetBatch14AM3.ConsoleApp1.EFCoreExamples;
+namespace DotNetBatch14AMO3.ConsoleApp2.EFCoreExamples;
 
 internal class EFCoreExample
 {
 	private readonly AppDbContext _db = new AppDbContext();
+
 	public void Read()
 	{
 		var blogs = _db.Blogs.ToList();
-		
+
 		foreach(var blog in blogs)
 		{
 			Console.WriteLine(blog.Id);
@@ -61,9 +63,10 @@ internal class EFCoreExample
 	{
 		var blog = _db.Blogs.AsNoTracking().FirstOrDefault(x => x.Id == id);
 
-		if(blog is null)
+		if (blog is null)
 		{
 			Console.WriteLine("No data found.");
+			return;
 		}
 
 		blog.Title = title;
@@ -71,7 +74,6 @@ internal class EFCoreExample
 		blog.Content = content;
 
 		_db.Entry(blog).State = EntityState.Modified;
-
 		int result = _db.SaveChanges();
 
 		string message = result > 0 ? "Updating successful." : "Updating failed.";
@@ -83,7 +85,7 @@ internal class EFCoreExample
 	{
 		var blog = _db.Blogs.AsNoTracking().FirstOrDefault(x => x.Id == id);
 
-		if(blog is null)
+		if (blog is null)
 		{
 			Console.WriteLine("No data found.");
 			return;

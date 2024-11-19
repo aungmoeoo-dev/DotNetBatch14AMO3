@@ -5,8 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 
-namespace DotNetBatch14AM3.ConsoleApp1.AdoDotNetExamples;
+namespace DotNetBatch14AM3.ConsoleApp2.AdoDotNetExamples;
 
 internal class AdoDotNetExample
 {
@@ -40,6 +41,7 @@ internal class AdoDotNetExample
 		connection.Open();
 
 		SqlCommand cmd = new($"select * from TBL_Blog where BlogId = '{id}'", connection);
+
 		SqlDataAdapter adapter = new(cmd);
 
 		DataTable dt = new();
@@ -77,6 +79,7 @@ internal class AdoDotNetExample
            ,'{content}')";
 
 		SqlCommand cmd = new(query, connection);
+
 		int result = cmd.ExecuteNonQuery();
 
 		connection.Close();
@@ -116,6 +119,7 @@ internal class AdoDotNetExample
 		connection.Open();
 
 		SqlCommand cmd = new($"delete from TBL_Blog where BlogId = '{id}'", connection);
+
 		int result = cmd.ExecuteNonQuery();
 
 		connection.Close();
